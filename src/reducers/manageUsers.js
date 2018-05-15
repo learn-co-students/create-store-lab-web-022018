@@ -1,11 +1,12 @@
 export default function manageUsers(state = {users: []}, action){
   // 1) returns the initial state after redux dispatches its initial action
-  console.log("*********************STATE");
-  console.log(state);
+  // console.log("*********************STATE");
+  // console.log(state);
   switch (action.type) {
-    case "ADD_USER":
-      console.log(action);
-      return Object.assign({}, state, {users: state.users.concat({"username": action.username, "hometown": action.hometown})})
+    case 'ADD_USER':
+      // console.log(action);
+      // return Object.assign({}, state, {users: state.users.concat({"username": action.username, "hometown": action.hometown})})
+      return Object.assign({}, state, {users: state.users.concat(action.user)})
       // break;
     default:
       return state
